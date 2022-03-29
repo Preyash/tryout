@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const clg = (...str) => console.log(...str);
+      function negative(n) {
+        return n < 0;
+      }
+      let range = (start, end, step) => {
+        if (step !== undefined) end -= 2;
+        while (start <= end) {
+          if (step !== undefined) {
+            clg((start += step));
+          } else {
+            clg(start++);
+          }
+          if (start > 30) break;
+        }
+      };
+      range(1, 10);
+    </script>
+  </body>
+</html>
+
+<!-- while (condition) {
+          if (step !== undefined) {
+            if (step === negative(step)) {
+              start -= step;
+            } else {
+              start += step;
+            }
+            console.log(start);
+          } else {
+            // if (step === negative(step)) {
+            //   start--
+            // } else {
+            //   start++
+            // }
+            console.log(start++);
+          }
+          if (start > 20) break;
+        } -->
